@@ -56,6 +56,7 @@ window.onload = function () {
 			result.innerHTML = '<strong>Error! All blocks are not equal with or are not equal height.</strong>';
 			return;
 		}
+		result.innerHTML = '';
 
 		var canvas = document.createElement('canvas');
 		canvas.width = block_width;
@@ -235,7 +236,6 @@ window.onload = function () {
 			return;
 		}
 		var cols_count = image_parts_src[0].length;
-		var loading = rows_count * cols_count;
 		var zip = new JSZip();
 		var folder = zip.folder(prefix);
 		for (var i = 0; i < rows_count; i++) {
