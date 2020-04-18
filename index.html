@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Image Splitter</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="jszip.min.js"></script>
+	<script src="main.js"></script>
+</head>
+
+<body>
+	<div id="config">
+		<table>
+			<tr>
+				<td>
+					<fieldset>
+						<legend>INPUT IMAGE</legend>
+						<input type="file" id="file_input">
+					</fieldset>
+				</td>
+				<td>
+					<fieldset>
+						<legend>OUTPUT</legend>
+						<label>quality: <input type="number" id="quality" value="0.92" step="0.01" min="0" max="1" disabled></label>
+						<button id="download_all_btn" class="pull-right" disabled>Download all</button>
+						<button id="reset_btn" class="pull-right">Reset</button>
+					</fieldset>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<fieldset>
+						<legend>HORIZONTALLY</legend>
+						<fieldset>
+							<legend>Split by</legend>
+							<label>
+								<input type="radio" name="split_horizontally_by" value="quantity_of_blocks_equal_width" id="split_by_cols" disabled>
+								Quantity of blocks (equal width):
+							</label>
+							<input type="number" id="cols" value="1" step="1" min="1" disabled>
+							<hr>
+							<label>
+								<input type="radio" name="split_horizontally_by" value="width_of_blocks" id="split_by_width" disabled>
+								Width of blocks:
+							</label>
+							<input type="number" id="block_width" value="" step="1" min="1" disabled>
+						</fieldset>
+					</fieldset>
+				</td>
+				<td>
+					<fieldset>
+						<legend>VERTICALLY</legend>
+						<fieldset>
+							<legend>Split by</legend>
+							<label>
+								<input type="radio" name="split_vertically_by" value="quantity_of_blocks_equal_height" id="split_by_rows" disabled>
+								Quantity of blocks (equal height):
+							</label>
+							<input type="number" id="rows" value="1" step="1" min="1" disabled>
+							<hr>
+							<label>
+								<input type="radio" name="split_vertically_by" value="height_of_blocks" id="split_by_height" disabled>
+								Height of blocks:
+							</label>
+							<input type="number" id="block_height" value="" step="1" min="1" disabled>
+						</fieldset>
+					</fieldset>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div id="result"></div>
+</body>
+
+</html>

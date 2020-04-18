@@ -1,0 +1,125 @@
+html,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	position: relative;
+	background: #eee;
+	font-family: sans-serif;
+	font-size: 16px;
+}
+
+fieldset,
+legend {
+	background: white;
+	box-sizing: border-box;
+}
+
+fieldset {
+	overflow: auto;
+}
+
+legend {
+	line-height: 1.5rem;
+	padding: 0 12px;
+	border: 1px solid #ddd;
+}
+
+input[type="number"] {
+	width: 100px;
+	line-height: 1.5rem;
+}
+
+input[type="text"] {
+	display: block;
+}
+
+td input {
+	box-sizing: border-box;
+	margin: 0;
+	width: 100%;
+}
+
+input {
+	line-height: 1.5rem;
+}
+
+input[type="radio"] {
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+hr,
+fieldset {
+	border: 2px solid #ddd;
+	margin-bottom: 10px;
+}
+
+hr {
+	border-width: 1px;
+}
+
+#config,
+#result {
+	box-sizing: border-box;
+	padding: 10px;
+}
+
+#config table {
+	box-sizing: border-box;
+	width: 100%;
+}
+
+#result {
+	width: 100%;
+	overflow: auto;
+}
+
+#result td {
+	box-sizing: border-box;
+	padding: 10px;
+}
+
+.preview img {
+	display: block;
+	margin: 0 auto;
+}
+
+.preview {
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	padding: 10px;
+	background: white;
+}
+
+.preview input {
+	margin-top: 10px;
+	min-width: 100px;
+}
+
+input,
+button {
+	line-height: 1.5rem;
+	font: inherit !important;
+}
+
+button {
+	padding: 0 12px;
+	margin: 5px;
+}
+
+input {
+	padding-left: 5px;
+}
+
+.pull-right {
+	float: right;
+}
