@@ -17,9 +17,6 @@ window.onload = function () {
 	var file, image, prefix;
 
 	function onOutputParamsChange() {
-		result.innerHTML = '';
-		download_all_btn.disabled = true;
-
 		var error = false;
 
 		if (split_by_width.checked) {
@@ -171,6 +168,11 @@ window.onload = function () {
 
 		quality.value = '0.92';
 
+		result.innerHTML = '';
+		download_all_btn.disabled = true;
+		image_parts_src = [];
+		image_parts_names = [];
+
 		if (file_input.value == '' || file_input.files.length == 0) {
 			return;
 		}
@@ -223,13 +225,15 @@ window.onload = function () {
 	function reset() {
 		file_input.value = '';
 		onFileInputChange();
-		result.innerHTML = '';
 	}
 
 	reset_btn.onclick = reset;
 
 	download_all_btn.onclick = function () {
 		var rows_count = image_parts_src.length;
+		if (rows_count <= 0) {
+			return;
+		}
 		var cols_count = image_parts_src[0].length;
 		var loading = rows_count * cols_count;
 		var zip = new JSZip();
